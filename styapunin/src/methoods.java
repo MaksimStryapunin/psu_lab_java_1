@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.Random;
 import java.util.function.*;
 import java.util.Scanner;
 
@@ -35,9 +34,8 @@ public class methoods {
     }
     public boolean isPositive(int x) { // 4
         boolean res = false;
-        if (x > 0) {
+        if (x > 0)
             res = true;
-        }
         return res;
     }
     //задача 6
@@ -86,7 +84,6 @@ public class methoods {
             res = methoods.lastNumSum(a1, b1);
             System.out.println("это " + res);
             a1 = res;
-            b1 = 0;
         }
         return res;
     }
@@ -94,18 +91,90 @@ public class methoods {
         return a % 10 + b % 10;
     }
 
-    //Задание 2
+    //Задание 2 Условия
 
     //задача 2
-
+    public double sub2_2(){
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int a1, b1;
+        System.out.println("введите следующее число");
+        a1 = scanner.nextInt();
+        System.out.println("введите следующее число");
+        b1 = scanner.nextInt();
+        return methoods.safeDiv(a1, b1);
+    }
+    public double safeDiv (int x, int y){
+        if (x==0 || y==0)
+            return 0;
+        else
+            return x/y;
+    }
     //задача 4
-
+    public String sub2_4(){
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int a1, b1;
+        System.out.println("введите следующее число");
+        a1 = scanner.nextInt();
+        System.out.println("введите следующее число");
+        b1 = scanner.nextInt();
+        return methoods.makeDecision(a1, b1);
+    }
+    public String makeDecision (int x, int y){
+        String res;
+        if (x > y)
+            res = ">";
+        else if (x == y)
+            res = "=";
+        else
+            res = "<";
+        return x + res + y;
+    }
     //задача 6
-
+    public boolean sub2_6(){
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int a1, b1;
+        System.out.println("введите следующее число");
+        a1 = scanner.nextInt();
+        System.out.println("введите следующее число");
+        return true;
+    }
+    public boolean sum3 (int x, int y, int z){
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int a1, b1;
+        System.out.println("введите следующее число");
+        a1 = scanner.nextInt();
+        System.out.println("введите следующее число");
+        return true;
+    }
     //задача 8
-
+    public String sub2_8(){
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int a1, b1;
+        System.out.println("введите следующее число");
+        a1 = scanner.nextInt();
+        System.out.println("введите следующее число");
+        return "1";
+    }
+    public String age (int x){
+        return "1";
+    }
     //задача 10
+    public void sub2_10(){
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int a1, b1;
+        System.out.println("введите следующее число");
+        a1 = scanner.nextInt();
+        System.out.println("введите следующее число");
+    }
+    public void printDays (String x){
 
+    }
 
     //Задание 3
 
