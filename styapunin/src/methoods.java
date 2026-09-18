@@ -78,14 +78,14 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1, b1, res = 0;
-        for (int i = 0; i < 5; i++) {
-
-            System.out.println("введите следующее число");
-            a1 = scanner.nextInt();
+        System.out.println("введите следующее число");
+        a1 = scanner.nextInt();
+        for (int i = 0; i < 4; i++) {
             System.out.println("введите следующее число");
             b1 = scanner.nextInt();
-            res += methoods.lastNumSum(a1, b1);
-            a1 = 0;
+            res = methoods.lastNumSum(a1, b1);
+            System.out.println("это " + res);
+            a1 = res;
             b1 = 0;
         }
         return res;

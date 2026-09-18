@@ -18,27 +18,27 @@ public class Main {
                 switch_choose = scanner.nextInt();
                 switch (switch_choose) {
                     case 2: {
-                        methoods.sub1_2();
+                        System.out.println(methoods.sub1_2());
                         System.out.println("-----------------------------------------------------------------------------------------");
                         break;
                     }
                     case 4: {
-                        methoods.sub1_4();
+                        System.out.println(methoods.sub1_4());
                         System.out.println("-----------------------------------------------------------------------------------------");
                         break;
                     }
                     case 6: {
-                        methoods.sub1_6();
+                        System.out.println(methoods.sub1_6());
                         System.out.println("-----------------------------------------------------------------------------------------");
                         break;
                     }
                     case 8: {
-                        methoods.sub1_8();
+                        System.out.println(methoods.sub1_8());
                         System.out.println("-----------------------------------------------------------------------------------------");
                         break;
                     }
                     case 10: {
-                        methoods.sub1_10();
+                        System.out.println(methoods.sub1_10());
                         System.out.println("-----------------------------------------------------------------------------------------");
                         break;
                     }
