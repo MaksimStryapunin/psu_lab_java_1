@@ -135,20 +135,21 @@ public class methoods {
     public boolean sub2_6(){
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
-        int a1, b1;
+        int a1, b1, c1;
         System.out.println("введите следующее число");
         a1 = scanner.nextInt();
         System.out.println("введите следующее число");
-        return true;
+        b1 = scanner.nextInt();
+        System.out.println("введите следующее число");
+        c1 = scanner.nextInt();
+        return methoods.sum3(a1, b1, c1);
     }
     public boolean sum3 (int x, int y, int z){
-        methoods methoods = new methoods();
-        Scanner scanner = new Scanner(System.in);
-        int a1, b1;
-        System.out.println("введите следующее число");
-        a1 = scanner.nextInt();
-        System.out.println("введите следующее число");
-        return true;
+        if ((x + y) == z || (y + z) == x || (x + z ) == y){
+            return true;
+        }
+        else
+            return false;
     }
     //задача 8
     public String sub2_8(){
