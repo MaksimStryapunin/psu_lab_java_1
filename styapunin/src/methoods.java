@@ -155,14 +155,21 @@ public class methoods {
     public String sub2_8(){
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
-        int a1, b1;
+        int a1;
         System.out.println("введите следующее число");
         a1 = scanner.nextInt();
-        System.out.println("введите следующее число");
-        return "1";
+        return methoods.age(a1);
     }
-    public String age (int x){
-        return "1";
+    public String age (int x) {
+        String res;
+        res = x + "";
+        if (x % 10 == 1 & x != 11)
+             res += " год";
+        else if ((x % 10) >= 5 & (x % 10) <= 9 || x % 10 == 0)
+            res += " лет";
+        else if ((x % 10) >= 2 & (x % 10) <= 4)
+            res += " года";
+        return res;
     }
     //задача 10
     public void sub2_10(){
@@ -171,7 +178,6 @@ public class methoods {
         int a1, b1;
         System.out.println("введите следующее число");
         a1 = scanner.nextInt();
-        System.out.println("введите следующее число");
     }
     public void printDays (String x){
 
