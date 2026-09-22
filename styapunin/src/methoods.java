@@ -196,15 +196,45 @@ public class methoods {
     //Задание 3
 
     //задача 2
-
+    public String sub3_2(){
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int a1;
+        System.out.println("введите следующее число");
+        a1 = scanner.nextInt();
+        return methoods.reverseListNums(a1);
+    }
+    public String reverseListNums(int x){
+        return "1";
+    }
     //задача 4
-
+    public int sub3_4(){
+        return 1;
+    }
+    public int pow (int x, int y){
+        return 1;
+    }
     //задача 6
-
+    public boolean sub3_6(){
+        return true;
+    }
+    public boolean equalNum (int x){
+        return true;
+    }
     //задача 8
+    public void sub3_8(){
 
+    }
+    public void leftTriangle (int x){
+
+    }
     //задача 10
+    public void sub3_10(){
 
+    }
+    public void guessGame(){
+
+    }
 
     //Задание 4
 
