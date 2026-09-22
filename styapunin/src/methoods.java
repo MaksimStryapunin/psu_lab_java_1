@@ -196,23 +196,47 @@ public class methoods {
     //Задание 3
 
     //задача 2
-    public String sub3_2(){
+    public void sub3_2(){
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1;
         System.out.println("введите следующее число");
         a1 = scanner.nextInt();
-        return methoods.reverseListNums(a1);
+        System.out.println(methoods.reverseListNums(a1));
     }
-    public String reverseListNums(int x){
-        return "1";
+    public String reverseListNums(int x) {
+        String res = "";
+        if (x > 0) {
+            while (x != -1) {
+                res += (x + " ");
+                x--;
+            }
+        } else if (x < 0){
+            while (x != 1) {
+                res += (x + " ");
+                x++;
+            }
+        } else
+            res = "0";
+        return res;
     }
     //задача 4
-    public int sub3_4(){
-        return 1;
+    public void sub3_4(){
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int a1, b1;
+        System.out.println("введите следующее число");
+        a1 = scanner.nextInt();
+        System.out.println("введите следующее число");
+        b1 = scanner.nextInt();
+        System.out.println(methoods.pow(a1, b1));
     }
     public int pow (int x, int y){
-        return 1;
+        int res = 1;
+        for (int i = 0; i < y; i++){
+            res *= x;
+        }
+        return res;
     }
     //задача 6
     public boolean sub3_6(){
