@@ -175,12 +175,22 @@ public class methoods {
     public void sub2_10(){
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
-        int a1, b1;
-        System.out.println("введите следующее число");
-        a1 = scanner.nextInt();
+        String a1;
+        System.out.println("введите следующее значение");
+        a1 = scanner.next();
+        methoods.printDays(a1);
     }
     public void printDays (String x){
-
+        switch (x){
+            case "понедельник": System.out.println("понедельник вторник среда четверг пятница суббота воскресенье"); break;
+            case "вторник": System.out.println("вторник среда четверг пятница суббота воскресенье"); break;
+            case "среда": System.out.println("среда четверг пятница суббота воскресенье"); break;
+            case "четверг": System.out.println("четверг пятница суббота воскресенье"); break;
+            case "пятница": System.out.println("пятница суббота воскресенье"); break;
+            case "суббота": System.out.println("суббота воскресенье"); break;
+            case "воскресенье": System.out.println("воскресенье"); break;
+            default: System.out.println("это не день недели"); break;
+        }
     }
 
     //Задание 3
