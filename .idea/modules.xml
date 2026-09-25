@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/psu_lab_java_1.iml" filepath="$PROJECT_DIR$/.idea/psu_lab_java_1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/styapunin/styapunin.iml" filepath="$PROJECT_DIR$/styapunin/styapunin.iml" />
-    </modules>
-  </component>
-</project>
