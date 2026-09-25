@@ -11,7 +11,7 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1, res = 0;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
         res += methoods.sumLastNums(a1);
         return res;
@@ -28,7 +28,7 @@ public class methoods {
         Scanner scanner = new Scanner(System.in);
         int a1;
         boolean res;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
         res = methoods.isPositive(a1);
         return res;
@@ -45,7 +45,7 @@ public class methoods {
         Scanner scanner = new Scanner(System.in);
         char a1 = scanner.next().charAt(0);
         boolean res;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         res = methoods.isUpperCase(a1);
         return res;
     }
@@ -60,9 +60,9 @@ public class methoods {
         Scanner scanner = new Scanner(System.in);
         int a1, b1;
         boolean res;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         b1 = scanner.nextInt();
         res = methoods.isDivisor(a1, b1);
         return res;
@@ -77,10 +77,10 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1, b1, res = 0;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
         for (int i = 0; i < 4; i++) {
-            System.out.println("введите следующее число");
+            System.out.println("введите следующее число:");
             b1 = scanner.nextInt();
             res = methoods.lastNumSum(a1, b1);
             System.out.println("это " + res);
@@ -99,9 +99,9 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1, b1;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         b1 = scanner.nextInt();
         return methoods.safeDiv(a1, b1);
     }
@@ -116,9 +116,9 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1, b1;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         b1 = scanner.nextInt();
         return methoods.makeDecision(a1, b1);
     }
@@ -137,11 +137,11 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1, b1, c1;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         b1 = scanner.nextInt();
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         c1 = scanner.nextInt();
         return methoods.sum3(a1, b1, c1);
     }
@@ -157,7 +157,7 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
         return methoods.age(a1);
     }
@@ -177,7 +177,7 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         String a1;
-        System.out.println("введите следующее значение");
+        System.out.println("введите следующее значение:");
         a1 = scanner.next();
         methoods.printDays(a1);
     }
@@ -201,7 +201,7 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
         System.out.println(methoods.reverseListNums(a1));
     }
@@ -226,9 +226,9 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1, b1;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         b1 = scanner.nextInt();
         System.out.println(methoods.pow(a1, b1));
     }
@@ -244,7 +244,7 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
         System.out.println(methoods.equalNum(a1));
     }
@@ -261,7 +261,7 @@ public class methoods {
         methoods methoods = new methoods();
         Scanner scanner = new Scanner(System.in);
         int a1;
-        System.out.println("введите следующее число");
+        System.out.println("введите следующее число:");
         a1 = scanner.nextInt();
         methoods.leftTriangle(a1);
     }
@@ -312,14 +312,143 @@ public class methoods {
     }
 
     //Задание 4 Массивы
+    //вспомогательная функция для заполнения массивов в задании 4
+    private static int[] fill_arrow(int[] arr){
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        int choose1 = 0;
+        System.out.println("выберете способ заполнения массива (1 - случайный / 2 - вручную / 3 - [1 2 3 4 5]):");
+        choose1 = scanner.nextInt();
+        while (choose1 < 1 || choose1 > 3) {
+            System.out.println("нет такой опции, повторите:");
+            choose1 = scanner.nextInt();
+        }
+        switch (choose1){
+            case 1: {
+                System.out.print("Введите размер массива: ");
+                int size = scanner.nextInt();
+                int[] arr1 = new int[size];
+                for (int i = 0; i < size; i++) {
+                    arr1[i] = random.nextInt(10);
+                }
+                arr = arr1;
+                for (int i : arr){
+                    System.out.print(i + " ");
+                }
+                System.out.println();
+                break;
+            }
+            case 2: {
+                System.out.print("Введите размер массива: ");
+                int size = scanner.nextInt();
+                int[] arr1 = new int[size];
+                System.out.println("Введите " + size + " элементов:");
+                for (int i = 0; i < size; i++) {
+                    arr1[i] = scanner.nextInt();
+                }
+                arr = arr1;
+                break;
+            }
+            case 3: {
+                int[] arr1 = {1, 2, 3, 4, 5};
+                arr = arr1;
+                break;
+            }
+            default: {
+                System.err.println("нет такой опции");
+                arr = fill_arrow(arr);
+                break;
+            }
+        }
+        return arr;
+    }
 
     //задача 2
-
+    public void sub4_2() {
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int x, res;
+        int[] arr = null;
+        arr = methoods.fill_arrow(arr);
+        System.out.println("введите следующее число(x): ");
+        x = scanner.nextInt();
+        res = methoods.findLast(arr, x);
+        System.out.println(res);
+    }
+    public int findLast (int[] arr, int x){
+        for (int i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] == x) {
+                return i;
+            }
+        }
+        return -1;
+    }
     //задача 4
+    public void sub4_4(){
 
+    }
+    public int[]add (int[] arr, int x, int pos){
+        if (pos < 0 || pos > arr.length) {
+            return arr;
+        }
+        int[] newArr = new int[arr.length + 1];
+        for (int i = 0; i < pos; i++) {
+            newArr[i] = arr[i];
+        }
+        newArr[pos] = x;
+        for (int i = pos; i < arr.length; i++) {
+            newArr[i + 1] = arr[i];
+        }
+        return newArr;
+    }
     //задача 6
+    public void sub4_6(){
 
+    }
+    public void reverse (int[] arr){
+        int[] arr1 = new int[arr.length];
+        int temp = 0;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            arr1[temp] = arr[i];
+            temp++;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = arr1[i];
+        }
+    }
     //задача 8
+    public void sub4_8(){
 
+    }
+    public int[] concat (int[] arr1,int[] arr2){
+        int[] result = new int[arr1.length + arr2.length];
+        int index = 0;
+        for (int num : arr1) {
+            result[index++] = num;
+        }
+        for (int num : arr2) {
+            result[index++] = num;
+        }
+        return result;
+    }
     //задача 10
+    public void sub4_10(){
+
+    }
+    public int[] deleteNegative (int[] arr) {
+        int count = 0;
+        for (int i : arr) {
+            if (i >= 0) {
+                count++;
+            }
+        }
+        int[] arr1 = new int[count];
+        int i = 0;
+        for (int j : arr) {
+            if (j >= 0) {
+                arr1[i++] = j;
+            }
+        }
+        return arr1;
+    }
 }
