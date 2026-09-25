@@ -313,10 +313,11 @@ public class methoods {
 
     //Задание 4 Массивы
     //вспомогательная функция для заполнения массивов в задании 4
-    private static int[] fill_arrow(int[] arr){
+    private static int[] fill_arrow(){
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int choose1 = 0;
+        int[] arr = null;
         System.out.println("выберете способ заполнения массива (1 - случайный / 2 - вручную / 3 - [1 2 3 4 5]):");
         choose1 = scanner.nextInt();
         while (choose1 < 1 || choose1 > 3) {
@@ -327,11 +328,10 @@ public class methoods {
             case 1: {
                 System.out.print("Введите размер массива: ");
                 int size = scanner.nextInt();
-                int[] arr1 = new int[size];
+                arr = new int[size];
                 for (int i = 0; i < size; i++) {
-                    arr1[i] = random.nextInt(10);
+                    arr[i] = random.nextInt(10);
                 }
-                arr = arr1;
                 for (int i : arr){
                     System.out.print(i + " ");
                 }
@@ -341,22 +341,20 @@ public class methoods {
             case 2: {
                 System.out.print("Введите размер массива: ");
                 int size = scanner.nextInt();
-                int[] arr1 = new int[size];
+                arr = new int[size];
                 System.out.println("Введите " + size + " элементов:");
                 for (int i = 0; i < size; i++) {
-                    arr1[i] = scanner.nextInt();
+                    arr[i] = scanner.nextInt();
                 }
-                arr = arr1;
                 break;
             }
             case 3: {
-                int[] arr1 = {1, 2, 3, 4, 5};
-                arr = arr1;
+                arr = new int[]{1, 2, 3, 4, 5};
                 break;
             }
             default: {
                 System.err.println("нет такой опции");
-                arr = fill_arrow(arr);
+                arr = fill_arrow();
                 break;
             }
         }
@@ -369,7 +367,7 @@ public class methoods {
         Scanner scanner = new Scanner(System.in);
         int x, res;
         int[] arr = null;
-        arr = methoods.fill_arrow(arr);
+        arr = methoods.fill_arrow();
         System.out.println("введите следующее число(x): ");
         x = scanner.nextInt();
         res = methoods.findLast(arr, x);
@@ -385,7 +383,20 @@ public class methoods {
     }
     //задача 4
     public void sub4_4(){
-
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int x, pos;
+        int[] arr = null;
+        arr = methoods.fill_arrow();
+        System.out.println("Введите позицию: ");
+        pos = scanner.nextInt();
+        System.out.println("Введите элемент: ");
+        x = scanner.nextInt();
+        arr = methoods.add(arr, x, pos);
+        for (int i : arr){
+            System.out.print(i + " ");
+        }
+        System.out.println();
     }
     public int[]add (int[] arr, int x, int pos){
         if (pos < 0 || pos > arr.length) {
@@ -403,7 +414,15 @@ public class methoods {
     }
     //задача 6
     public void sub4_6(){
-
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int x, res;
+        int[] arr = null;
+        arr = methoods.fill_arrow();
+        methoods.reverse(arr);
+        for (int i : arr){
+            System.out.print(i + " ");
+        }
     }
     public void reverse (int[] arr){
         int[] arr1 = new int[arr.length];
@@ -415,10 +434,23 @@ public class methoods {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = arr1[i];
         }
+        System.out.println();
     }
     //задача 8
     public void sub4_8(){
-
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int x, res;
+        int[] arr = null, arr1 = null, arr2 = null;
+        System.out.println("первый массив(arr1)");
+        arr1 = methoods.fill_arrow();
+        System.out.println("второй массив(arr2)");
+        arr2 = methoods.fill_arrow();
+        arr = methoods.concat(arr1, arr2);
+        for (int i : arr){
+            System.out.print(i + " ");
+        }
+        System.out.println();
     }
     public int[] concat (int[] arr1,int[] arr2){
         int[] result = new int[arr1.length + arr2.length];
@@ -433,7 +465,16 @@ public class methoods {
     }
     //задача 10
     public void sub4_10(){
-
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int x, res;
+        int[] arr = null;
+        arr = methoods.fill_arrow();
+        arr = methoods.deleteNegative(arr);
+        for (int i : arr){
+            System.out.print(i + " ");
+        }
+        System.out.println();
     }
     public int[] deleteNegative (int[] arr) {
         int count = 0;
