@@ -43,7 +43,7 @@ public class Main {
                         break;
                     }
                     default: {
-                        System.out.println("Нет задачи в задании");
+                        System.err.println("Нет задачи в задании");
                         break;
                     }
                 }
@@ -82,7 +82,7 @@ public class Main {
                         break;
                     }
                     default: {
-                        System.out.println("Нет задачи в задании");
+                        System.err.println("Нет задачи в задании");
                         break;
                     }
                 }
@@ -121,7 +121,7 @@ public class Main {
                         break;
                     }
                     default: {
-                        System.out.println("Нет задачи в задании");
+                        System.err.println("Нет задачи в задании");
                         break;
                     }
                 }
@@ -160,12 +160,14 @@ public class Main {
                         break;
                     }
                     default: {
-                        System.out.println("Нет задачи в задании");
+                        System.err.println("Нет задачи в задании");
                         break;
                     }
                 }
                 break;
             }
+            default:{ System.err.println("Нет задачи в задании");
+                break;}
         }
     }
 }

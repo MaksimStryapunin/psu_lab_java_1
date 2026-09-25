@@ -1,6 +1,7 @@
 import java.util.*;
 import java.util.function.*;
 import java.util.Scanner;
+import java.util.Random;
 
 public class methoods {
     //Задание 1 Методы
@@ -189,11 +190,11 @@ public class methoods {
             case "пятница": System.out.println("пятница суббота воскресенье"); break;
             case "суббота": System.out.println("суббота воскресенье"); break;
             case "воскресенье": System.out.println("воскресенье"); break;
-            default: System.out.println("это не день недели"); break;
+            default: System.err.println("это не день недели"); break;
         }
     }
 
-    //Задание 3
+    //Задание 3 Циклы
 
     //задача 2
     public void sub3_2(){
@@ -239,28 +240,78 @@ public class methoods {
         return res;
     }
     //задача 6
-    public boolean sub3_6(){
-        return true;
+    public void sub3_6(){
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int a1;
+        System.out.println("введите следующее число");
+        a1 = scanner.nextInt();
+        System.out.println(methoods.equalNum(a1));
     }
     public boolean equalNum (int x){
+        int a = x % 10;
+        while (x != 0) {
+            if (x % 10 != a) return false;
+            x /= 10;
+        }
         return true;
     }
     //задача 8
     public void sub3_8(){
-
+        methoods methoods = new methoods();
+        Scanner scanner = new Scanner(System.in);
+        int a1;
+        System.out.println("введите следующее число");
+        a1 = scanner.nextInt();
+        methoods.leftTriangle(a1);
     }
     public void leftTriangle (int x){
-
+        if (x < 0) {
+            System.err.println("некорректное число");
+        }else {
+            int a = 1;
+            while (a <= x) {
+                for (int i = 0; i < a; i++)
+                    System.out.print("*");
+                a++;
+                System.out.println();
+            }
+        }
     }
     //задача 10
     public void sub3_10(){
-
+        methoods methoods = new methoods();
+        methoods.guessGame();
+    }
+    public String sub_to_counter(int x){
+        if (x%10 == 1 && x%100 != 11) {
+            return "попытку";
+        } else if (x%10 >= 2 && x%10 <= 4 && (x%100 < 10 || x%100 >= 20)) {
+            return "попытки";
+        } else {
+            return "попыток";
+        }
     }
     public void guessGame(){
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+        int a, counter = 0;
+        a = random.nextInt(10);
+        System.out.println("Введите число от 0 до 9:");
+        while (true) {
+            int user_a = scanner.nextInt();
+            counter++;
+            if (user_a == a) {
+                System.out.println("Вы угадали!");
+                System.out.println("Вы отгадали число за " + counter + " " + sub_to_counter(counter));
+                break;
+            } else
+                System.out.print("Вы не угадали, введите число от 0 до 9: ");
+        }
 
     }
 
-    //Задание 4
+    //Задание 4 Массивы
 
     //задача 2
 
